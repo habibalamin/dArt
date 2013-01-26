@@ -146,7 +146,6 @@ try:
                 exit(1)
     search = replace(search, "/search&", "/search?")
     search = replace(search, "/lookup&", "/lookup?")
-    print search
     search += "&limit=200"
     
     if "search" in search:
