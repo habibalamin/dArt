@@ -72,7 +72,7 @@ def humanReadableCountry(isocode):
     elif isocode == "gb":
         return "UK"
     else:
-        return "American"
+        return isocode
 
 if len(argv) < 2:
     print "Usage: " + basename(argv[0]) + " " + shortUsageMessage
