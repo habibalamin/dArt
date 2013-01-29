@@ -2,7 +2,7 @@
 # encoding: utf-8
 
 # Name: iStore Artwork Downloader - dArt - download Art
-# Version: .1
+# Version: 1b1
 # Purpose: This application will search Apple's online stores (iTunes Store, iBookstore, Mac App Store and iOS App Store) for a user-input term and retrieve the full resolution cover art images from Apple's servers. It MAY support other sources in the future, but for now, it's limited to Apple's online media stores.
 # Author: Habib alAmin
 
@@ -178,10 +178,17 @@ try:
     for i in range(len(searchResults[u'results'])):
         if urlopen(replace(searchResults[u'results'][i][u'artworkUrl100'], ".100x100-75", "")).getcode() == 200:
             try:
-                urlretrieve(replace(searchResults[u'results'][i][u'artworkUrl100'], ".100x100-75", ""), expandvars(expanduser(join(downloadLocation, searchResults[u'results'][i][u'trackName']))) + splitext(searchResults[u'results'][i][u'artworkUrl100'])[1])
+                urlretrieve(replace(searchResults[u'results'][i][u'artworkUrl100'], ".100x100-75", ""), expandvars(expanduser(join(downloadLocation, replace(searchResults[u'results'][i][u'trackName'], "/", "--")))) + splitext(searchResults[u'results'][i][u'artworkUrl100'])[1])
                 print "The artwork for \"" + searchResults[u'results'][i][u'trackName'] + "\"", "has been retrieved!"
             except KeyError:
-                urlretrieve(replace(searchResults[u'results'][i][u'artworkUrl100'], ".100x100-75", ""), expandvars(expanduser(join(downloadLocation, searchResults[u'results'][i][u'collectionName']))) + splitext(searchResults[u'results'][i][u'artworkUrl100'])[1])
+                urlretrieve(replace(searchResults[u'results'][i][u'artworkUrl100'], ".100x100-75", ""), expandvars(expanduser(join(downloadLocation, replace(searchResults[u'results'][i][u'collectionName'], "/", "--")))) + splitext(searchResults[u'results'][i][u'artworkUrl100'])[1])
+                print "The artwork for \"" + searchResults[u'results'][i][u'collectionName'] + "\"", "has been retrieved!"
+        elif urlopen(replace(searchResults[u'results'][i][u'artworkUrl100'], ".100x100-75", "")).getcode() == 403:
+            try:
+                urlretrieve(replace(searchResults[u'results'][i][u'artworkUrl100'], ".100x100", ".600x600"), expandvars(expanduser(join(downloadLocation, replace(searchResults[u'results'][i][u'trackName'], "/", "--")))) + splitext(searchResults[u'results'][i][u'artworkUrl100'])[1])
+                print "The artwork for \"" + searchResults[u'results'][i][u'trackName'] + "\"", "has been retrieved!"
+            except KeyError:
+                urlretrieve(replace(searchResults[u'results'][i][u'artworkUrl100'], ".100x100", ".600x600"), expandvars(expanduser(join(downloadLocation, replace(searchResults[u'results'][i][u'collectionName'], "/", "--")))) + splitext(searchResults[u'results'][i][u'artworkUrl100'])[1])
                 print "The artwork for \"" + searchResults[u'results'][i][u'collectionName'] + "\"", "has been retrieved!"
         else:
             try:
