@@ -1,3 +1,5 @@
+All of the information below only applies to the CLI version. A new README is coming soon.
+
 iStore Artwork Downloader!
 ========================
 
