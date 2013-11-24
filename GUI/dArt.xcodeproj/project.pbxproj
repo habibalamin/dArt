@@ -8,21 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		1718101C1842223C000A80D5 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1718101B1842223C000A80D5 /* Icons.xcassets */; };
-		1718101F1842252D000A80D5 /* ArtworkResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718101E1842252D000A80D5 /* ArtworkResult.m */; };
+		1718101F1842252D000A80D5 /* DRTArtworkResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718101E1842252D000A80D5 /* DRTArtworkResult.m */; };
 		17AA93A416D2574E00AE1524 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA93A316D2574E00AE1524 /* Cocoa.framework */; };
 		17AA93AE16D2574E00AE1524 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93AC16D2574E00AE1524 /* InfoPlist.strings */; };
 		17AA93B016D2574E00AE1524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93AF16D2574E00AE1524 /* main.m */; };
 		17AA93C316D2577A00AE1524 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93C216D2577A00AE1524 /* Credits.rtf */; };
-		17AA93CB16D2578D00AE1524 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C516D2578D00AE1524 /* AppDelegate.m */; };
+		17AA93CB16D2578D00AE1524 /* DRTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */; };
 		17AA93CC16D2578D00AE1524 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93C616D2578D00AE1524 /* MainMenu.xib */; };
-		17AA93CD16D2578D00AE1524 /* PictureConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C816D2578D00AE1524 /* PictureConnection.m */; };
-		17AA93CE16D2578D00AE1524 /* SearchURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93CA16D2578D00AE1524 /* SearchURL.m */; };
+		17AA93CD16D2578D00AE1524 /* DRTPictureConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C816D2578D00AE1524 /* DRTPictureConnection.m */; };
+		17AA93CE16D2578D00AE1524 /* DRTSearchURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		1718101B1842223C000A80D5 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
-		1718101D1842252D000A80D5 /* ArtworkResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtworkResult.h; sourceTree = "<group>"; };
-		1718101E1842252D000A80D5 /* ArtworkResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtworkResult.m; sourceTree = "<group>"; };
+		1718101D1842252D000A80D5 /* DRTArtworkResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTArtworkResult.h; sourceTree = "<group>"; };
+		1718101E1842252D000A80D5 /* DRTArtworkResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTArtworkResult.m; sourceTree = "<group>"; };
 		17AA93A016D2574E00AE1524 /* dArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AA93A316D2574E00AE1524 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		17AA93A616D2574E00AE1524 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -33,13 +33,13 @@
 		17AA93AF16D2574E00AE1524 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17AA93B116D2574E00AE1524 /* dArt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dArt-Prefix.pch"; sourceTree = "<group>"; };
 		17AA93C216D2577A00AE1524 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		17AA93C416D2578D00AE1524 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		17AA93C516D2578D00AE1524 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		17AA93C416D2578D00AE1524 /* DRTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTAppDelegate.h; sourceTree = "<group>"; };
+		17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTAppDelegate.m; sourceTree = "<group>"; };
 		17AA93C616D2578D00AE1524 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		17AA93C716D2578D00AE1524 /* PictureConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureConnection.h; sourceTree = "<group>"; };
-		17AA93C816D2578D00AE1524 /* PictureConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureConnection.m; sourceTree = "<group>"; };
-		17AA93C916D2578D00AE1524 /* SearchURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchURL.h; sourceTree = "<group>"; };
-		17AA93CA16D2578D00AE1524 /* SearchURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchURL.m; sourceTree = "<group>"; };
+		17AA93C716D2578D00AE1524 /* DRTPictureConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTPictureConnection.h; sourceTree = "<group>"; };
+		17AA93C816D2578D00AE1524 /* DRTPictureConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTPictureConnection.m; sourceTree = "<group>"; };
+		17AA93C916D2578D00AE1524 /* DRTSearchURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTSearchURL.h; sourceTree = "<group>"; };
+		17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTSearchURL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,15 +93,15 @@
 		17AA93A916D2574E00AE1524 /* dArt */ = {
 			isa = PBXGroup;
 			children = (
-				17AA93C416D2578D00AE1524 /* AppDelegate.h */,
-				17AA93C516D2578D00AE1524 /* AppDelegate.m */,
+				17AA93C416D2578D00AE1524 /* DRTAppDelegate.h */,
+				17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */,
 				17AA93C616D2578D00AE1524 /* MainMenu.xib */,
-				1718101D1842252D000A80D5 /* ArtworkResult.h */,
-				1718101E1842252D000A80D5 /* ArtworkResult.m */,
-				17AA93C716D2578D00AE1524 /* PictureConnection.h */,
-				17AA93C816D2578D00AE1524 /* PictureConnection.m */,
-				17AA93C916D2578D00AE1524 /* SearchURL.h */,
-				17AA93CA16D2578D00AE1524 /* SearchURL.m */,
+				1718101D1842252D000A80D5 /* DRTArtworkResult.h */,
+				1718101E1842252D000A80D5 /* DRTArtworkResult.m */,
+				17AA93C716D2578D00AE1524 /* DRTPictureConnection.h */,
+				17AA93C816D2578D00AE1524 /* DRTPictureConnection.m */,
+				17AA93C916D2578D00AE1524 /* DRTSearchURL.h */,
+				17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */,
 				17AA93AA16D2574E00AE1524 /* Supporting Files */,
 			);
 			path = dArt;
@@ -186,10 +186,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				17AA93B016D2574E00AE1524 /* main.m in Sources */,
-				17AA93CB16D2578D00AE1524 /* AppDelegate.m in Sources */,
-				17AA93CD16D2578D00AE1524 /* PictureConnection.m in Sources */,
-				17AA93CE16D2578D00AE1524 /* SearchURL.m in Sources */,
-				1718101F1842252D000A80D5 /* ArtworkResult.m in Sources */,
+				17AA93CB16D2578D00AE1524 /* DRTAppDelegate.m in Sources */,
+				17AA93CD16D2578D00AE1524 /* DRTPictureConnection.m in Sources */,
+				17AA93CE16D2578D00AE1524 /* DRTSearchURL.m in Sources */,
+				1718101F1842252D000A80D5 /* DRTArtworkResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

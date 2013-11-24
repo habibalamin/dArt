@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 alAmin. All rights reserved.
 //
 
-#import "ArtworkResult.h"
+#import "DRTArtworkResult.h"
 
 @implementation ArtworkResult
 @synthesize title;

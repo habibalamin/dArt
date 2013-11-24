@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 alAmin. All rights reserved.
 //
 
-#import "AppDelegate.h"
-#import "SearchURL.h"
-#import "PictureConnection.h"
+#import "DRTAppDelegate.h"
+#import "DRTSearchURL.h"
+#import "DRTPictureConnection.h"
 
 @implementation AppDelegate
 

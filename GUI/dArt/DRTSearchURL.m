@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 alAmin. All rights reserved.
 //
 
-#import "SearchURL.h"
+#import "DRTSearchURL.h"
 
 @implementation SearchURL
 

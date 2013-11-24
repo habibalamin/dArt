@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 alAmin. All rights reserved.
 //
 
-#import "PictureConnection.h"
+#import "DRTPictureConnection.h"
 
 @implementation PictureConnection
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response
