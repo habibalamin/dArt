@@ -146,6 +146,7 @@
 		17AA939816D2574E00AE1524 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = DRT;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = alAmin;
 			};
