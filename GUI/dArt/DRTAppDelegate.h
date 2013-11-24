@@ -1,5 +1,5 @@
 //
-//  AppDelegate.h
+//  DRTAppDelegate.h
 //  dArt
 //
 //  Created by Habib A on 09/02/2013.

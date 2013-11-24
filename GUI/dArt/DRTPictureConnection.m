@@ -1,5 +1,5 @@
 //
-//  PictureConnection.m
+//  DRTPictureConnection.m
 //  dArt
 //
 //  Created by Habib A on 12/02/2013.

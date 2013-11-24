@@ -1,5 +1,5 @@
 //
-//  ArtworkResult.m
+//  DRTArtworkResult.m
 //  dArt
 //
 //  Created by Habib A on 24/11/2013.

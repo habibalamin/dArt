@@ -1,5 +1,5 @@
 //
-//  PictureConnection.h
+//  DRTPictureConnection.h
 //  dArt
 //
 //  Created by Habib A on 12/02/2013.

@@ -1,5 +1,5 @@
 //
-//  ArtworkResult.h
+//  DRTArtworkResult.h
 //  dArt
 //
 //  Created by Habib A on 24/11/2013.
