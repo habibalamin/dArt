@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1718101C1842223C000A80D5 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1718101B1842223C000A80D5 /* Icons.xcassets */; };
+		1718101F1842252D000A80D5 /* ArtworkResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718101E1842252D000A80D5 /* ArtworkResult.m */; };
 		17AA93A416D2574E00AE1524 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA93A316D2574E00AE1524 /* Cocoa.framework */; };
 		17AA93AE16D2574E00AE1524 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93AC16D2574E00AE1524 /* InfoPlist.strings */; };
 		17AA93B016D2574E00AE1524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93AF16D2574E00AE1524 /* main.m */; };
@@ -20,6 +21,8 @@
 
 /* Begin PBXFileReference section */
 		1718101B1842223C000A80D5 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		1718101D1842252D000A80D5 /* ArtworkResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtworkResult.h; sourceTree = "<group>"; };
+		1718101E1842252D000A80D5 /* ArtworkResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtworkResult.m; sourceTree = "<group>"; };
 		17AA93A016D2574E00AE1524 /* dArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AA93A316D2574E00AE1524 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		17AA93A616D2574E00AE1524 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -93,6 +96,8 @@
 				17AA93C416D2578D00AE1524 /* AppDelegate.h */,
 				17AA93C516D2578D00AE1524 /* AppDelegate.m */,
 				17AA93C616D2578D00AE1524 /* MainMenu.xib */,
+				1718101D1842252D000A80D5 /* ArtworkResult.h */,
+				1718101E1842252D000A80D5 /* ArtworkResult.m */,
 				17AA93C716D2578D00AE1524 /* PictureConnection.h */,
 				17AA93C816D2578D00AE1524 /* PictureConnection.m */,
 				17AA93C916D2578D00AE1524 /* SearchURL.h */,
@@ -184,6 +189,7 @@
 				17AA93CB16D2578D00AE1524 /* AppDelegate.m in Sources */,
 				17AA93CD16D2578D00AE1524 /* PictureConnection.m in Sources */,
 				17AA93CE16D2578D00AE1524 /* SearchURL.m in Sources */,
+				1718101F1842252D000A80D5 /* ArtworkResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
