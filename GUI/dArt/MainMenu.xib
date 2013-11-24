@@ -491,7 +491,7 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
-                                                <tableCellView id="woa-Yw-WTy">
+                                                <tableCellView identifier="artResult" id="woa-Yw-WTy">
                                                     <rect key="frame" x="1" y="1" width="445" height="200"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
@@ -511,6 +511,7 @@
                                                         </imageView>
                                                     </subviews>
                                                     <connections>
+                                                        <outlet property="imageView" destination="eAy-jB-68l" id="O5g-W0-Oen"/>
                                                         <outlet property="textField" destination="l1i-ee-wNh" id="0Tc-9y-AnF"/>
                                                     </connections>
                                                 </tableCellView>

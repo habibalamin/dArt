@@ -10,19 +10,19 @@
 
 @implementation DRTArtworkResult
 
-@synthesize title;
-@synthesize image;
+@synthesize artworkTitle;
+@synthesize artworkImage;
 
 - (id)initWithTitle:(NSString *)resultTitle andImageData:(NSData *)resultImageData {
     self = [self init];
-    [self setTitle:resultTitle];
-    [self setImage:[[NSImage alloc] initWithData:resultImageData]];
+    [self setArtworkTitle:resultTitle];
+    [self setArtworkImage:[[NSImage alloc] initWithData:resultImageData]];
     return self;
 }
 - (id)initWithTitle:(NSString *)resultTitle andImage:(NSImage *)resultImage {
     self = [self init];
-    [self setTitle:resultTitle];
-    [self setImage:resultImage];
+    [self setArtworkTitle:resultTitle];
+    [self setArtworkImage:resultImage];
     return self;
 }
 

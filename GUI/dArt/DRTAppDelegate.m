@@ -8,6 +8,7 @@
 
 #import "DRTAppDelegate.h"
 #import "DRTSearchURL.h"
+#import "DRTArtworkResult.h"
 
 @implementation DRTAppDelegate
 
@@ -187,11 +188,12 @@
         } else {
             fileName = [[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"trackName"] stringByReplacingOccurrencesOfString:@"/" withString:@"OR"] stringByReplacingOccurrencesOfString:@":" withString:@" -"];
         }
-        NSString *downloadTo = [[NSString alloc] initWithString:[[downloadPath stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:extension]];
-        // NSImage *picture = [[NSImage alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
+        // NSString *downloadTo = [[NSString alloc] initWithString:[[downloadPath stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:extension]];
+        NSImage *picture = [[NSImage alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
         // [artworkResults addObject:picture];
-        NSData *pictureData = [[NSData alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
-        [artworkResults addObject:pictureData];
+        // NSData *pictureData = [[NSData alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
+        DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName andImage:picture];
+        [artworkResults addObject:res];
         // [pictureData writeToFile:downloadTo atomically:YES];
         /*
         [[DRTPictureConnection alloc] setupConnection:pictureRequest300px downloadTo:downloadTo];
@@ -199,5 +201,18 @@
         [[DRTPictureConnection alloc] setupConnection:pictureRequest downloadTo:downloadTo];
         */
     }
+}
+
+// Table View Delegate methods
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NSTableCellView *view = [tableView makeViewWithIdentifier:@"artResult" owner:self];
+    view.textField.stringValue = [[[self artworkResults] objectAtIndex:row] artworkTitle];
+    view.imageView.image = [[[self artworkResults] objectAtIndex:row] artworkImage];
+    return view;
+}
+
+// Table View Data Source methods
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
+    return [[self artworkResults] count];
 }
 @end

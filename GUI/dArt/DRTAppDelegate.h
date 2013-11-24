@@ -10,7 +10,7 @@
 
 @class DRTSearchURL;
 @class DRTPictureConnection;
-@interface DRTAppDelegate : NSObject <NSApplicationDelegate>
+@interface DRTAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *searchTerm;
@@ -39,4 +39,9 @@
 - (NSString *)convertMediaType:(NSString *)humanReadableMediaType;
 - (void)downloadEngine:(NSString *)APISearchURLString;
 
+// Table View Delegate methods
+- (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row;
+
+// Table View Data Source methods
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView;
 @end

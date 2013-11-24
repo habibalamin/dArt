@@ -10,8 +10,8 @@
 
 @interface DRTArtworkResult : NSObject
 
-@property NSString *title;
-@property NSImage *image;
+@property NSString *artworkTitle;
+@property NSImage *artworkImage;
 
 - (id)initWithTitle:(NSString *)resultTitle andImageData:(NSData *)resultImageData;
 - (id)initWithTitle:(NSString *)resultTitle andImage:(NSImage *)resultImage;
