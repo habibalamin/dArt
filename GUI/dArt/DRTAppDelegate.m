@@ -18,6 +18,7 @@
 @synthesize mediaType;
 @synthesize downloadLocation;
 @synthesize explicitFilter;
+@synthesize artworkResults;
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
