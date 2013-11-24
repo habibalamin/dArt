@@ -8,9 +8,9 @@
 
 #import <Cocoa/Cocoa.h>
 
-@class SearchURL;
-@class PictureConnection;
-@interface AppDelegate : NSObject <NSApplicationDelegate>
+@class DRTSearchURL;
+@class DRTPictureConnection;
+@interface DRTAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
 @property (weak) IBOutlet NSTextField *searchTerm;
@@ -22,7 +22,7 @@
 @property (weak) IBOutlet NSMatrix *searchBy;
 @property (weak) IBOutlet NSCollectionView *resultsView;
 
-@property (strong) SearchURL *searchURL;
+@property (strong) DRTSearchURL *searchURL;
 @property (strong) NSMutableArray *artworkResults;
 
 - (IBAction)updateSearchTerm:(id)sender;

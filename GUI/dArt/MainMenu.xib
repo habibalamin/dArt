@@ -528,7 +528,7 @@
                 </constraints>
             </view>
         </window>
-        <customObject id="494" customClass="AppDelegate">
+        <customObject id="494" customClass="DRTAppDelegate">
             <connections>
                 <outlet property="downloadLocation" destination="800" id="859"/>
                 <outlet property="explicitFilter" destination="663" id="852"/>

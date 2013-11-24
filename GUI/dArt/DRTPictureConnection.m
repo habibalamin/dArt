@@ -8,7 +8,7 @@
 
 #import "DRTPictureConnection.h"
 
-@implementation PictureConnection
+@implementation DRTPictureConnection
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSHTTPURLResponse *)response
 {
     picStatusCode = [response statusCode];

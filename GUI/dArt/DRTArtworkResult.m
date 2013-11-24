@@ -8,7 +8,7 @@
 
 #import "DRTArtworkResult.h"
 
-@implementation ArtworkResult
+@implementation DRTArtworkResult
 @synthesize title;
 @synthesize image;
 @end

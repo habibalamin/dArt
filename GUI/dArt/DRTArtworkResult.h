@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ArtworkResult : NSObject
+@interface DRTArtworkResult : NSObject
 @property NSString *title;
 @property NSImage *image;
 @end

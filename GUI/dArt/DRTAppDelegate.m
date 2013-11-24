@@ -10,7 +10,7 @@
 #import "DRTSearchURL.h"
 #import "DRTPictureConnection.h"
 
-@implementation AppDelegate
+@implementation DRTAppDelegate
 
 @synthesize searchTerm;
 @synthesize lookupID;
@@ -21,7 +21,7 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
-    SearchURL *aSearchURL = [[SearchURL alloc] init];
+    DRTSearchURL *aSearchURL = [[DRTSearchURL alloc] init];
     [self setSearchURL:aSearchURL];
     [self updateSearchBy:self.searchBy];
     [self updateUI];
@@ -191,9 +191,9 @@
         NSURLRequest *pictureRequest = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
         NSURLRequest *pictureRequest600px = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@".600x600-75"]]];
         NSURLRequest *pictureRequest300px = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@".300x300-75"]]];
-        [[PictureConnection alloc] setupConnection:pictureRequest300px downloadTo:downloadToParameter];
-        [[PictureConnection alloc] setupConnection:pictureRequest600px downloadTo:downloadToParameter];
-        [[PictureConnection alloc] setupConnection:pictureRequest downloadTo:downloadToParameter];
+        [[DRTPictureConnection alloc] setupConnection:pictureRequest300px downloadTo:downloadToParameter];
+        [[DRTPictureConnection alloc] setupConnection:pictureRequest600px downloadTo:downloadToParameter];
+        [[DRTPictureConnection alloc] setupConnection:pictureRequest downloadTo:downloadToParameter];
     }
 }
 @end

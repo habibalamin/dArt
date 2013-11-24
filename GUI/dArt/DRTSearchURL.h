@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SearchURL : NSObject
+@interface DRTSearchURL : NSObject
 @property NSString *theSearchTerm;
 @property NSString *theLookupID;
 @property NSString *theStoreCountry;

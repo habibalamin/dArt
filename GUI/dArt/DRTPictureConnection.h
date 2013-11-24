@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PictureConnection : NSURLConnection <NSURLConnectionDelegate> {
+@interface DRTPictureConnection : NSURLConnection <NSURLConnectionDelegate> {
     NSURLConnection *connection;
     NSInteger picStatusCode;
     NSMutableData *picData;

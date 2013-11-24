@@ -8,6 +8,6 @@
 
 #import "DRTSearchURL.h"
 
-@implementation SearchURL
+@implementation DRTSearchURL
 
 @end
