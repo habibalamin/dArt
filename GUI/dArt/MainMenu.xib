@@ -541,14 +541,6 @@
                 <outlet property="window" destination="371" id="532"/>
             </connections>
         </customObject>
-        <collectionViewItem id="cTi-Rc-uPi">
-            <connections>
-                <outlet property="view" destination="zJ9-ZU-id0" id="YWe-I2-FpP"/>
-            </connections>
-        </collectionViewItem>
-        <view id="zJ9-ZU-id0">
-            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-            <autoresizingMask key="autoresizingMask"/>
-        </view>
+        <collectionViewItem id="cTi-Rc-uPi"/>
     </objects>
 </document>
