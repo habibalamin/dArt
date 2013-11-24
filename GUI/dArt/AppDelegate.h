@@ -20,8 +20,10 @@
 @property (weak) IBOutlet NSPopUpButton *mediaType;
 @property (weak) IBOutlet NSTextField *downloadLocation;
 @property (weak) IBOutlet NSMatrix *searchBy;
+@property (weak) IBOutlet NSCollectionView *resultsView;
 
 @property (strong) SearchURL *searchURL;
+@property (strong) NSMutableArray *artworkResults;
 
 - (IBAction)updateSearchTerm:(id)sender;
 - (IBAction)updateLookupID:(id)sender;
