@@ -9,6 +9,11 @@
 #import <Foundation/Foundation.h>
 
 @interface DRTArtworkResult : NSObject
+
 @property NSString *title;
 @property NSImage *image;
+
+- (id)initWithTitle:(NSString *)resultTitle andImageData:(NSData *)resultImageData;
+- (id)initWithTitle:(NSString *)resultTitle andImage:(NSImage *)resultImage;
+
 @end
