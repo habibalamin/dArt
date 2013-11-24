@@ -20,7 +20,7 @@
 @property (weak) IBOutlet NSPopUpButton *mediaType;
 @property (weak) IBOutlet NSTextField *downloadLocation;
 @property (weak) IBOutlet NSMatrix *searchBy;
-@property (weak) IBOutlet NSCollectionView *resultsView;
+@property (weak) IBOutlet NSTableView *resultsView;
 
 @property (strong) DRTSearchURL *searchURL;
 @property (strong) NSMutableArray *artworkResults;
