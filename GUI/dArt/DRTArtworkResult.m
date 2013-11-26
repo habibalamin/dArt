@@ -12,17 +12,25 @@
 
 @synthesize artworkTitle;
 @synthesize artworkImage;
+@synthesize downloadTo;
 
-- (id)initWithTitle:(NSString *)resultTitle andImageData:(NSData *)resultImageData {
-    self = [self init];
-    [self setArtworkTitle:resultTitle];
-    [self setArtworkImage:[[NSImage alloc] initWithData:resultImageData]];
+- (id)initWithTitle:(NSString *)resultTitle imageData:(NSData *)resultImageData andDownloadTo:(NSString *)downloadPath {
+    self = [super init];
+    if (self) {
+        artworkTitle = resultTitle;
+        artworkImage = [[NSImage alloc] initWithData:resultImageData];
+        downloadTo = downloadPath;
+    }
     return self;
 }
-- (id)initWithTitle:(NSString *)resultTitle andImage:(NSImage *)resultImage {
-    self = [self init];
-    [self setArtworkTitle:resultTitle];
-    [self setArtworkImage:resultImage];
+
+- (id)initWithTitle:(NSString *)resultTitle image:(NSImage *)resultImage andDownloadTo:(NSString *)downloadPath {
+    self = [super init];
+    if (self) {
+        artworkTitle = resultTitle;
+        artworkImage = resultImage;
+        downloadTo = downloadPath;
+    }
     return self;
 }
 

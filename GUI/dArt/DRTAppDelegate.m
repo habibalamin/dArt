@@ -9,6 +9,7 @@
 #import "DRTAppDelegate.h"
 #import "DRTSearchURL.h"
 #import "DRTArtworkResult.h"
+#import "DRTPictureConnection.h"
 
 @implementation DRTAppDelegate
 
@@ -23,6 +24,7 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
     DRTSearchURL *aSearchURL = [[DRTSearchURL alloc] init];
+    artworkResults = [[NSMutableArray alloc] init];
     [self setSearchURL:aSearchURL];
     [self updateSearchBy:self.searchBy];
     [self updateUI];
@@ -179,40 +181,51 @@
     NSURL *JSONURL = [[NSURL alloc] initWithString:APISearchURLString];
     NSData *JSONResults = [NSData dataWithContentsOfURL:JSONURL];
     NSDictionary *decodedJSONResults = [NSJSONSerialization JSONObjectWithData:JSONResults options:NSJSONReadingMutableContainers & NSJSONReadingMutableLeaves error:NULL];
-    NSString *downloadPath = [self.searchURL theDownloadLocation];
+    NSString *downloadLoc = [self.searchURL theDownloadLocation];
     for (int i = 0; i < [[decodedJSONResults objectForKey:@"results"] count]; i++) {
         NSString *extension = [[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] lastPathComponent] pathExtension];
         NSString *fileName;
         if ([[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"trackName"] == nil) {
+            // Albums and such
             fileName = [[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"collectionName"] stringByReplacingOccurrencesOfString:@"/" withString:@"OR"] stringByReplacingOccurrencesOfString:@":" withString:@" -"];
         } else {
+            // Single entities
             fileName = [[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"trackName"] stringByReplacingOccurrencesOfString:@"/" withString:@"OR"] stringByReplacingOccurrencesOfString:@":" withString:@" -"];
         }
-        // NSString *downloadTo = [[NSString alloc] initWithString:[[downloadPath stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:extension]];
+        NSString *downloadPath = [[NSString alloc] initWithString:[[downloadLoc stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:extension]];
+        // NSLog(@"%@", downloadPath);
         NSImage *picture = [[NSImage alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
-        // [artworkResults addObject:picture];
         // NSData *pictureData = [[NSData alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
-        DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName andImage:picture];
+        DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:picture andDownloadTo:downloadPath];
         [artworkResults addObject:res];
-        // [pictureData writeToFile:downloadTo atomically:YES];
-        /*
-        [[DRTPictureConnection alloc] setupConnection:pictureRequest300px downloadTo:downloadTo];
-        [[DRTPictureConnection alloc] setupConnection:pictureRequest600px downloadTo:downloadTo];
-        [[DRTPictureConnection alloc] setupConnection:pictureRequest downloadTo:downloadTo];
-        */
+        
+        NSURLRequest *pictureRequest = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
+        NSURLRequest *pictureRequest600px = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@".600x600-75"]]];
+        NSURLRequest *pictureRequest300px = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@".300x300-75"]]];
+        [[DRTPictureConnection alloc] setupConnection:pictureRequest300px downloadTo:downloadPath];
+        [[DRTPictureConnection alloc] setupConnection:pictureRequest600px downloadTo:downloadPath];
+        [[DRTPictureConnection alloc] setupConnection:pictureRequest downloadTo:downloadPath];
     }
+    for (int i = 0; i < [artworkResults count]; i++) {
+        //[[artworkResults objectAtIndex:i] writeToFile:[[artworkResults objectAtIndex:i] downloadTo]];
+        NSLog(@"%@", [[artworkResults objectAtIndex:i] downloadTo]);
+        NSLog(@"%@", [[artworkResults objectAtIndex:i] artworkTitle]);
+        NSLog(@"%@", [[artworkResults objectAtIndex:i] artworkImage]);
+        // NSLog(@"%@");
+    }
+    NSLog(@"%lu", (unsigned long)[artworkResults count]);
 }
 
 // Table View Delegate methods
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NSTableCellView *view = [tableView makeViewWithIdentifier:@"artResult" owner:self];
-    view.textField.stringValue = [[[self artworkResults] objectAtIndex:row] artworkTitle];
-    view.imageView.image = [[[self artworkResults] objectAtIndex:row] artworkImage];
+    view.textField.stringValue = [[artworkResults objectAtIndex:row] artworkTitle];
+    view.imageView.image = [[artworkResults objectAtIndex:row] artworkImage];
     return view;
 }
 
 // Table View Data Source methods
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)aTableView {
-    return [[self artworkResults] count];
+    return [artworkResults count];
 }
 @end

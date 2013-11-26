@@ -16,6 +16,7 @@
 		17AA93CB16D2578D00AE1524 /* DRTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */; };
 		17AA93CC16D2578D00AE1524 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93C616D2578D00AE1524 /* MainMenu.xib */; };
 		17AA93CE16D2578D00AE1524 /* DRTSearchURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */; };
+		17D1A22A184552BF006AC4F5 /* DRTPictureConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D1A229184552BF006AC4F5 /* DRTPictureConnection.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		17AA93C616D2578D00AE1524 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		17AA93C916D2578D00AE1524 /* DRTSearchURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTSearchURL.h; sourceTree = "<group>"; };
 		17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTSearchURL.m; sourceTree = "<group>"; };
+		17D1A228184552BF006AC4F5 /* DRTPictureConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTPictureConnection.h; sourceTree = "<group>"; };
+		17D1A229184552BF006AC4F5 /* DRTPictureConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTPictureConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 			children = (
 				17AA93C416D2578D00AE1524 /* DRTAppDelegate.h */,
 				17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */,
+				17D1A228184552BF006AC4F5 /* DRTPictureConnection.h */,
+				17D1A229184552BF006AC4F5 /* DRTPictureConnection.m */,
 				17AA93C616D2578D00AE1524 /* MainMenu.xib */,
 				1718101D1842252D000A80D5 /* DRTArtworkResult.h */,
 				1718101E1842252D000A80D5 /* DRTArtworkResult.m */,
@@ -181,6 +186,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17D1A22A184552BF006AC4F5 /* DRTPictureConnection.m in Sources */,
 				17AA93B016D2574E00AE1524 /* main.m in Sources */,
 				17AA93CB16D2578D00AE1524 /* DRTAppDelegate.m in Sources */,
 				17AA93CE16D2578D00AE1524 /* DRTSearchURL.m in Sources */,

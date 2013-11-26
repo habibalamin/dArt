@@ -12,8 +12,9 @@
 
 @property NSString *artworkTitle;
 @property NSImage *artworkImage;
+@property NSString *downloadTo;
 
-- (id)initWithTitle:(NSString *)resultTitle andImageData:(NSData *)resultImageData;
-- (id)initWithTitle:(NSString *)resultTitle andImage:(NSImage *)resultImage;
+- (id)initWithTitle:(NSString *)resultTitle imageData:(NSData *)resultImageData andDownloadTo:(NSString *)downloadPath;
+- (id)initWithTitle:(NSString *)resultTitle image:(NSImage *)resultImage andDownloadTo:(NSString *)downloadPath;
 
 @end
