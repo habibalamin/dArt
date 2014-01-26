@@ -7,18 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1718101C1842223C000A80D5 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1718101B1842223C000A80D5 /* Icons.xcassets */; };
+		1718101F1842252D000A80D5 /* DRTArtworkResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718101E1842252D000A80D5 /* DRTArtworkResult.m */; };
 		17AA93A416D2574E00AE1524 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA93A316D2574E00AE1524 /* Cocoa.framework */; };
 		17AA93AE16D2574E00AE1524 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93AC16D2574E00AE1524 /* InfoPlist.strings */; };
 		17AA93B016D2574E00AE1524 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93AF16D2574E00AE1524 /* main.m */; };
-		17AA93C116D2575B00AE1524 /* dArt.icns in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93C016D2575B00AE1524 /* dArt.icns */; };
 		17AA93C316D2577A00AE1524 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93C216D2577A00AE1524 /* Credits.rtf */; };
-		17AA93CB16D2578D00AE1524 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C516D2578D00AE1524 /* AppDelegate.m */; };
+		17AA93CB16D2578D00AE1524 /* DRTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */; };
 		17AA93CC16D2578D00AE1524 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93C616D2578D00AE1524 /* MainMenu.xib */; };
-		17AA93CD16D2578D00AE1524 /* PictureConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C816D2578D00AE1524 /* PictureConnection.m */; };
-		17AA93CE16D2578D00AE1524 /* SearchURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93CA16D2578D00AE1524 /* SearchURL.m */; };
+		17AA93CE16D2578D00AE1524 /* DRTSearchURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1718101B1842223C000A80D5 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		1718101D1842252D000A80D5 /* DRTArtworkResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTArtworkResult.h; sourceTree = "<group>"; };
+		1718101E1842252D000A80D5 /* DRTArtworkResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTArtworkResult.m; sourceTree = "<group>"; };
 		17AA93A016D2574E00AE1524 /* dArt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dArt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17AA93A316D2574E00AE1524 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		17AA93A616D2574E00AE1524 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -28,15 +31,12 @@
 		17AA93AD16D2574E00AE1524 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17AA93AF16D2574E00AE1524 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		17AA93B116D2574E00AE1524 /* dArt-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dArt-Prefix.pch"; sourceTree = "<group>"; };
-		17AA93C016D2575B00AE1524 /* dArt.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = dArt.icns; sourceTree = "<group>"; };
 		17AA93C216D2577A00AE1524 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
-		17AA93C416D2578D00AE1524 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		17AA93C516D2578D00AE1524 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		17AA93C416D2578D00AE1524 /* DRTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTAppDelegate.h; sourceTree = "<group>"; };
+		17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTAppDelegate.m; sourceTree = "<group>"; };
 		17AA93C616D2578D00AE1524 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
-		17AA93C716D2578D00AE1524 /* PictureConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PictureConnection.h; sourceTree = "<group>"; };
-		17AA93C816D2578D00AE1524 /* PictureConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PictureConnection.m; sourceTree = "<group>"; };
-		17AA93C916D2578D00AE1524 /* SearchURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchURL.h; sourceTree = "<group>"; };
-		17AA93CA16D2578D00AE1524 /* SearchURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchURL.m; sourceTree = "<group>"; };
+		17AA93C916D2578D00AE1524 /* DRTSearchURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTSearchURL.h; sourceTree = "<group>"; };
+		17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTSearchURL.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,6 @@
 		17AA939716D2574E00AE1524 = {
 			isa = PBXGroup;
 			children = (
-				17AA93C016D2575B00AE1524 /* dArt.icns */,
 				17AA93A916D2574E00AE1524 /* dArt */,
 				17AA93A216D2574E00AE1524 /* Frameworks */,
 				17AA93A116D2574E00AE1524 /* Products */,
@@ -91,13 +90,13 @@
 		17AA93A916D2574E00AE1524 /* dArt */ = {
 			isa = PBXGroup;
 			children = (
-				17AA93C416D2578D00AE1524 /* AppDelegate.h */,
-				17AA93C516D2578D00AE1524 /* AppDelegate.m */,
+				17AA93C416D2578D00AE1524 /* DRTAppDelegate.h */,
+				17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */,
 				17AA93C616D2578D00AE1524 /* MainMenu.xib */,
-				17AA93C716D2578D00AE1524 /* PictureConnection.h */,
-				17AA93C816D2578D00AE1524 /* PictureConnection.m */,
-				17AA93C916D2578D00AE1524 /* SearchURL.h */,
-				17AA93CA16D2578D00AE1524 /* SearchURL.m */,
+				1718101D1842252D000A80D5 /* DRTArtworkResult.h */,
+				1718101E1842252D000A80D5 /* DRTArtworkResult.m */,
+				17AA93C916D2578D00AE1524 /* DRTSearchURL.h */,
+				17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */,
 				17AA93AA16D2574E00AE1524 /* Supporting Files */,
 			);
 			path = dArt;
@@ -106,6 +105,7 @@
 		17AA93AA16D2574E00AE1524 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1718101B1842223C000A80D5 /* Icons.xcassets */,
 				17AA93C216D2577A00AE1524 /* Credits.rtf */,
 				17AA93AB16D2574E00AE1524 /* dArt-Info.plist */,
 				17AA93AC16D2574E00AE1524 /* InfoPlist.strings */,
@@ -141,7 +141,8 @@
 		17AA939816D2574E00AE1524 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				CLASSPREFIX = DRT;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = alAmin;
 			};
 			buildConfigurationList = 17AA939B16D2574E00AE1524 /* Build configuration list for PBXProject "dArt" */;
@@ -167,9 +168,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17AA93AE16D2574E00AE1524 /* InfoPlist.strings in Resources */,
-				17AA93C116D2575B00AE1524 /* dArt.icns in Resources */,
 				17AA93C316D2577A00AE1524 /* Credits.rtf in Resources */,
 				17AA93CC16D2578D00AE1524 /* MainMenu.xib in Resources */,
+				1718101C1842223C000A80D5 /* Icons.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,9 +182,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				17AA93B016D2574E00AE1524 /* main.m in Sources */,
-				17AA93CB16D2578D00AE1524 /* AppDelegate.m in Sources */,
-				17AA93CD16D2578D00AE1524 /* PictureConnection.m in Sources */,
-				17AA93CE16D2578D00AE1524 /* SearchURL.m in Sources */,
+				17AA93CB16D2578D00AE1524 /* DRTAppDelegate.m in Sources */,
+				17AA93CE16D2578D00AE1524 /* DRTSearchURL.m in Sources */,
+				1718101F1842252D000A80D5 /* DRTArtworkResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +206,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -238,7 +238,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -263,6 +262,7 @@
 		17AA93BE16D2574F00AE1524 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dArt/dArt-Prefix.pch";
@@ -275,6 +275,7 @@
 		17AA93BF16D2574F00AE1524 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dArt/dArt-Prefix.pch";
@@ -303,6 +304,7 @@
 				17AA93BF16D2574F00AE1524 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,13 +1,13 @@
 //
-//  SearchURL.m
+//  DRTSearchURL.m
 //  dArt
 //
 //  Created by Habib A on 09/02/2013.
 //  Copyright (c) 2013 alAmin. All rights reserved.
 //
 
-#import "SearchURL.h"
+#import "DRTSearchURL.h"
 
-@implementation SearchURL
+@implementation DRTSearchURL
 
 @end

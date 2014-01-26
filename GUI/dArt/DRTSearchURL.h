@@ -1,5 +1,5 @@
 //
-//  SearchURL.h
+//  DRTSearchURL.h
 //  dArt
 //
 //  Created by Habib A on 09/02/2013.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SearchURL : NSObject
+@interface DRTSearchURL : NSObject
 @property NSString *theSearchTerm;
 @property NSString *theLookupID;
 @property NSString *theStoreCountry;
