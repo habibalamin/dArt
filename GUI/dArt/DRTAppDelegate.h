@@ -9,7 +9,6 @@
 #import <Cocoa/Cocoa.h>
 
 @class DRTSearchURL;
-@class DRTPictureConnection;
 @interface DRTAppDelegate : NSObject <NSApplicationDelegate, NSTableViewDataSource, NSTableViewDelegate>
 
 @property (assign) IBOutlet NSWindow *window;

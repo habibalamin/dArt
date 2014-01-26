@@ -9,7 +9,6 @@
 #import "DRTAppDelegate.h"
 #import "DRTSearchURL.h"
 #import "DRTArtworkResult.h"
-#import "DRTPictureConnection.h"
 
 @implementation DRTAppDelegate
 
@@ -195,25 +194,12 @@
         NSString *downloadPath = [[NSString alloc] initWithString:[[downloadLoc stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:extension]];
         // NSLog(@"%@", downloadPath);
         NSImage *picture = [[NSImage alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
-        // NSData *pictureData = [[NSData alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
         DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:picture andDownloadTo:downloadPath];
-        [artworkResults addObject:res];
-        
-        NSURLRequest *pictureRequest = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
-        NSURLRequest *pictureRequest600px = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@".600x600-75"]]];
-        NSURLRequest *pictureRequest300px = [[NSURLRequest alloc] initWithURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@".300x300-75"]]];
-        [[DRTPictureConnection alloc] setupConnection:pictureRequest300px downloadTo:downloadPath];
-        [[DRTPictureConnection alloc] setupConnection:pictureRequest600px downloadTo:downloadPath];
-        [[DRTPictureConnection alloc] setupConnection:pictureRequest downloadTo:downloadPath];
+        if ([res artworkImage] != nil) {
+            [artworkResults addObject:res];
+        }
+        [[self resultsView] reloadData];
     }
-    for (int i = 0; i < [artworkResults count]; i++) {
-        //[[artworkResults objectAtIndex:i] writeToFile:[[artworkResults objectAtIndex:i] downloadTo]];
-        NSLog(@"%@", [[artworkResults objectAtIndex:i] downloadTo]);
-        NSLog(@"%@", [[artworkResults objectAtIndex:i] artworkTitle]);
-        NSLog(@"%@", [[artworkResults objectAtIndex:i] artworkImage]);
-        // NSLog(@"%@");
-    }
-    NSLog(@"%lu", (unsigned long)[artworkResults count]);
 }
 
 // Table View Delegate methods
