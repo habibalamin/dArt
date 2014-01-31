@@ -9,6 +9,8 @@
 #import "DRTAppDelegate.h"
 #import "DRTSearchURL.h"
 #import "DRTArtworkResult.h"
+#import "DRTDownloadButton.h"
+#import "DRTTableCellView.h"
 
 @implementation DRTAppDelegate
 
@@ -212,9 +214,10 @@
 
 // Table View Delegate methods
 - (NSView *)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NSTableCellView *view = [tableView makeViewWithIdentifier:@"artResult" owner:self];
+    DRTTableCellView *view = [tableView makeViewWithIdentifier:@"artResult" owner:self];
     view.textField.stringValue = [[artworkResults objectAtIndex:row] artworkTitle];
     view.imageView.image = [[artworkResults objectAtIndex:row] artworkImage];
+	view.dlButton.dlPath = [[artworkResults objectAtIndex:row] downloadTo];
     return view;
 }
 

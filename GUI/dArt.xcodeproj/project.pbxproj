@@ -16,6 +16,8 @@
 		17AA93CB16D2578D00AE1524 /* DRTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */; };
 		17AA93CC16D2578D00AE1524 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17AA93C616D2578D00AE1524 /* MainMenu.xib */; };
 		17AA93CE16D2578D00AE1524 /* DRTSearchURL.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */; };
+		17DF3441189BF32D0076192C /* DRTTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DF3440189BF32D0076192C /* DRTTableCellView.m */; };
+		17DF3444189C0C4B0076192C /* DRTDownloadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DF3443189C0C4B0076192C /* DRTDownloadButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,10 @@
 		17AA93C616D2578D00AE1524 /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainMenu.xib; sourceTree = "<group>"; };
 		17AA93C916D2578D00AE1524 /* DRTSearchURL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTSearchURL.h; sourceTree = "<group>"; };
 		17AA93CA16D2578D00AE1524 /* DRTSearchURL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTSearchURL.m; sourceTree = "<group>"; };
+		17DF343F189BF32D0076192C /* DRTTableCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTTableCellView.h; sourceTree = "<group>"; };
+		17DF3440189BF32D0076192C /* DRTTableCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTTableCellView.m; sourceTree = "<group>"; };
+		17DF3442189C0C4B0076192C /* DRTDownloadButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTDownloadButton.h; sourceTree = "<group>"; };
+		17DF3443189C0C4B0076192C /* DRTDownloadButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTDownloadButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,8 +96,12 @@
 		17AA93A916D2574E00AE1524 /* dArt */ = {
 			isa = PBXGroup;
 			children = (
+				17DF343F189BF32D0076192C /* DRTTableCellView.h */,
+				17DF3440189BF32D0076192C /* DRTTableCellView.m */,
 				17AA93C416D2578D00AE1524 /* DRTAppDelegate.h */,
 				17AA93C516D2578D00AE1524 /* DRTAppDelegate.m */,
+				17DF3442189C0C4B0076192C /* DRTDownloadButton.h */,
+				17DF3443189C0C4B0076192C /* DRTDownloadButton.m */,
 				17AA93C616D2578D00AE1524 /* MainMenu.xib */,
 				1718101D1842252D000A80D5 /* DRTArtworkResult.h */,
 				1718101E1842252D000A80D5 /* DRTArtworkResult.m */,
@@ -181,7 +191,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17DF3444189C0C4B0076192C /* DRTDownloadButton.m in Sources */,
 				17AA93B016D2574E00AE1524 /* main.m in Sources */,
+				17DF3441189BF32D0076192C /* DRTTableCellView.m in Sources */,
 				17AA93CB16D2578D00AE1524 /* DRTAppDelegate.m in Sources */,
 				17AA93CE16D2578D00AE1524 /* DRTSearchURL.m in Sources */,
 				1718101F1842252D000A80D5 /* DRTArtworkResult.m in Sources */,

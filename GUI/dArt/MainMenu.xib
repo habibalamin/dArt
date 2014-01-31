@@ -464,14 +464,14 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="19" horizontalPageScroll="10" verticalLineScroll="19" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olx-dP-MOT">
+                    <scrollView fixedFrame="YES" autohidesScrollers="YES" horizontalLineScroll="202" horizontalPageScroll="10" verticalLineScroll="202" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Olx-dP-MOT">
                         <rect key="frame" x="15" y="76" width="450" height="379"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <clipView key="contentView" ambiguous="YES" misplaced="YES" id="4IB-Zx-3B6">
                             <rect key="frame" x="1" y="17" width="448" height="361"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             <subviews>
-                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowSizeStyle="automatic" headerView="xYN-BK-0uW" viewBased="YES" id="9GB-u3-Mph">
+                                <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="200" rowSizeStyle="automatic" headerView="xYN-BK-0uW" viewBased="YES" id="9GB-u3-Mph">
                                     <rect key="frame" x="0.0" y="0.0" width="448" height="361"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <size key="intercellSpacing" width="3" height="2"/>
@@ -491,12 +491,12 @@
                                             </textFieldCell>
                                             <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                             <prototypeCellViews>
-                                                <tableCellView identifier="artResult" id="woa-Yw-WTy">
+                                                <tableCellView identifier="artResult" id="woa-Yw-WTy" customClass="DRTTableCellView">
                                                     <rect key="frame" x="1" y="1" width="445" height="200"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l1i-ee-wNh">
-                                                            <rect key="frame" x="241" y="2" width="204" height="197"/>
+                                                            <rect key="frame" x="241" y="29" width="204" height="170"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="URA-l3-jeJ">
                                                                 <font key="font" metaFont="system"/>
@@ -509,8 +509,20 @@
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="olH-yV-frt"/>
                                                         </imageView>
+                                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GW9-PW-J1c" customClass="DRTDownloadButton">
+                                                            <rect key="frame" x="255" y="2" width="40" height="19"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                            <buttonCell key="cell" type="roundRect" title="Save" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pHa-Aj-7xJ">
+                                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                <font key="font" metaFont="controlContent"/>
+                                                            </buttonCell>
+                                                            <connections>
+                                                                <action selector="downloadImage:" target="woa-Yw-WTy" id="qDg-BB-yaa"/>
+                                                            </connections>
+                                                        </button>
                                                     </subviews>
                                                     <connections>
+                                                        <outlet property="dlButton" destination="GW9-PW-J1c" id="FoK-bq-k90"/>
                                                         <outlet property="imageView" destination="eAy-jB-68l" id="O5g-W0-Oen"/>
                                                         <outlet property="textField" destination="l1i-ee-wNh" id="0Tc-9y-AnF"/>
                                                     </connections>
