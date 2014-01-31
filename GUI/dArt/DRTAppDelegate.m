@@ -208,12 +208,12 @@
 						break;
 					}
 					else {
-						DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:picture300px andDownloadTo:downloadPath];
+						DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:[fileName stringByAppendingString:@"\n\n300px"] image:picture300px andDownloadTo:downloadPath];
 						[artworkResults addObject:res];
 					}
 				}
 				else {
-					DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:picture600px andDownloadTo:downloadPath];
+					DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:[fileName stringByAppendingString:@"\n\n600px"] image:picture600px andDownloadTo:downloadPath];
 					[artworkResults addObject:res];
 				}
 			}
