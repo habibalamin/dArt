@@ -199,11 +199,28 @@
             }
             NSString *downloadPath = [[NSString alloc] initWithString:[[downloadLoc stringByAppendingPathComponent:fileName] stringByAppendingPathExtension:extension]];
             // NSLog(@"%@", downloadPath);
-            NSImage *picture = [[NSImage alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
-            DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:picture andDownloadTo:downloadPath];
-            if ([res artworkImage] != nil) {
-                [artworkResults addObject:res];
-            }
+            NSImage *pictureFullSize = [[NSImage alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@""]]];
+			if (!pictureFullSize) {
+				NSImage *picture600px = [[NSImage alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@".600x600-75"]]];
+				if (!picture600px) {
+					NSImage *picture300px = [[NSImage alloc] initWithContentsOfURL:[[NSURL alloc] initWithString:[[[[decodedJSONResults objectForKey:@"results"] objectAtIndex:i] objectForKey:@"artworkUrl100"] stringByReplacingOccurrencesOfString:@".100x100-75" withString:@".300x300-75"]]];
+					if (!picture300px) {
+						break;
+					}
+					else {
+						DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:picture300px andDownloadTo:downloadPath];
+						[artworkResults addObject:res];
+					}
+				}
+				else {
+					DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:picture600px andDownloadTo:downloadPath];
+					[artworkResults addObject:res];
+				}
+			}
+			else {
+				DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:pictureFullSize andDownloadTo:downloadPath];
+				[artworkResults addObject:res];
+			}
             // Make sure function is done in main thread
             dispatch_async(dispatch_get_main_queue(), ^{
                 [[self resultsView] reloadData];
