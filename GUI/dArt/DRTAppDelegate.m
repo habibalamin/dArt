@@ -218,7 +218,7 @@
 				}
 			}
 			else {
-				DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:fileName image:pictureFullSize andDownloadTo:downloadPath];
+				DRTArtworkResult *res = [[DRTArtworkResult alloc] initWithTitle:[fileName stringByAppendingString:@"\n\nFull size"] image:pictureFullSize andDownloadTo:downloadPath];
 				[artworkResults addObject:res];
 			}
             // Make sure function is done in main thread
