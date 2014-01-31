@@ -25,7 +25,7 @@
 }
 
 - (IBAction)downloadImage:(id)sender {
-	[[[imageView image] TIFFRepresentation] writeToFile:[[dlButton dlPath] stringByAppendingPathExtension:@"tiff"] atomically:NO];
+	[[[imageView image] TIFFRepresentation] writeToFile:[[[dlButton dlPath] stringByReplacingOccurrencesOfString:@".jpg" withString:@""] stringByAppendingPathExtension:@"tiff"] atomically:NO];
 }
 
 @end

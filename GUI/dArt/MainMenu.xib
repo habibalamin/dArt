@@ -496,9 +496,9 @@
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l1i-ee-wNh">
-                                                            <rect key="frame" x="241" y="29" width="204" height="170"/>
+                                                            <rect key="frame" x="203" y="29" width="242" height="170"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" id="URA-l3-jeJ">
+                                                            <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="left" id="URA-l3-jeJ">
                                                                 <font key="font" metaFont="system"/>
                                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -510,11 +510,11 @@
                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" id="olH-yV-frt"/>
                                                         </imageView>
                                                         <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GW9-PW-J1c" customClass="DRTDownloadButton">
-                                                            <rect key="frame" x="255" y="2" width="40" height="19"/>
+                                                            <rect key="frame" x="205" y="2" width="40" height="19"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                            <buttonCell key="cell" type="roundRect" title="Save" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pHa-Aj-7xJ">
+                                                            <buttonCell key="cell" type="roundRect" title="Save" bezelStyle="roundedRect" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" sound="Glass" inset="2" id="pHa-Aj-7xJ">
                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                                <font key="font" metaFont="controlContent"/>
+                                                                <font key="font" metaFont="cellTitle"/>
                                                             </buttonCell>
                                                             <connections>
                                                                 <action selector="downloadImage:" target="woa-Yw-WTy" id="qDg-BB-yaa"/>
@@ -603,4 +603,7 @@
             </connections>
         </customObject>
     </objects>
+    <resources>
+        <sound name="Glass"/>
+    </resources>
 </document>
