@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		17067B74189D0EC100ACFE17 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17067B73189D0EC100ACFE17 /* Sparkle.framework */; };
+		17067B76189D10FD00ACFE17 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17067B73189D0EC100ACFE17 /* Sparkle.framework */; };
 		1718101C1842223C000A80D5 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1718101B1842223C000A80D5 /* Icons.xcassets */; };
 		1718101F1842252D000A80D5 /* DRTArtworkResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718101E1842252D000A80D5 /* DRTArtworkResult.m */; };
 		17AA93A416D2574E00AE1524 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA93A316D2574E00AE1524 /* Cocoa.framework */; };
@@ -20,6 +21,19 @@
 		17DF3441189BF32D0076192C /* DRTTableCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DF3440189BF32D0076192C /* DRTTableCellView.m */; };
 		17DF3444189C0C4B0076192C /* DRTDownloadButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 17DF3443189C0C4B0076192C /* DRTDownloadButton.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		17067B75189D10F400ACFE17 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				17067B76189D10FD00ACFE17 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		17067B73189D0EC100ACFE17 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
@@ -139,6 +153,7 @@
 				17AA939C16D2574E00AE1524 /* Sources */,
 				17AA939D16D2574E00AE1524 /* Frameworks */,
 				17AA939E16D2574E00AE1524 /* Resources */,
+				17067B75189D10F400ACFE17 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -287,6 +302,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dArt/dArt-Prefix.pch";
 				INFOPLIST_FILE = "dArt/dArt-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -304,6 +320,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dArt/dArt-Prefix.pch";
 				INFOPLIST_FILE = "dArt/dArt-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
