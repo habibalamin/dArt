@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17067B74189D0EC100ACFE17 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17067B73189D0EC100ACFE17 /* Sparkle.framework */; };
 		1718101C1842223C000A80D5 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1718101B1842223C000A80D5 /* Icons.xcassets */; };
 		1718101F1842252D000A80D5 /* DRTArtworkResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 1718101E1842252D000A80D5 /* DRTArtworkResult.m */; };
 		17AA93A416D2574E00AE1524 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17AA93A316D2574E00AE1524 /* Cocoa.framework */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17067B73189D0EC100ACFE17 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		1718101B1842223C000A80D5 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		1718101D1842252D000A80D5 /* DRTArtworkResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRTArtworkResult.h; sourceTree = "<group>"; };
 		1718101E1842252D000A80D5 /* DRTArtworkResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRTArtworkResult.m; sourceTree = "<group>"; };
@@ -51,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				17AA93A416D2574E00AE1524 /* Cocoa.framework in Frameworks */,
+				17067B74189D0EC100ACFE17 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +80,7 @@
 		17AA93A216D2574E00AE1524 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				17067B73189D0EC100ACFE17 /* Sparkle.framework */,
 				17AA93A316D2574E00AE1524 /* Cocoa.framework */,
 				17AA93A516D2574E00AE1524 /* Other Frameworks */,
 			);
@@ -276,6 +280,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Habib/Documents/Development/dArt/GUI,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dArt/dArt-Prefix.pch";
 				INFOPLIST_FILE = "dArt/dArt-Info.plist";
@@ -289,6 +297,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/Habib/Documents/Development/dArt/GUI,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "dArt/dArt-Prefix.pch";
 				INFOPLIST_FILE = "dArt/dArt-Info.plist";
